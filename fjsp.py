@@ -1,4 +1,4 @@
-DATASET_DIR = 'drive/My Drive/03 Educação/PUC/Computação Evolucionária/Trabalho/'
+DATASET_DIR = r"C:\Users\dtaku\Documents\GA-FJSP"
 
 import pandas as pd
 import os
