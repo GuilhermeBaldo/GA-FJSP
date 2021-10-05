@@ -1,5 +1,3 @@
-DATASET_DIR = r"C:\Users\dtaku\Documents\GA-FJSP"
-
 import pandas as pd
 import os
 import random
@@ -12,10 +10,14 @@ import math
 import sys
 import matplotlib.pyplot as plt
 
+DATASET_DIR = os.path.join(os.getcwd(),"GA-FJSP")
+
 # le o arquivo excel contendo o dataset (mudar sheet name para mudar input)
 SHEET_NAME = 2 # de 0 a 7
 LOT_NUMBER = 1 # 1, 2 ou 3
-raw_df = pd.read_excel(os.path.join(DATASET_DIR,'Dataset.xlsx'), sheet_name=SHEET_NAME)
+raw_df = pd.read_excel(os.path.join(DATASET_DIR,"Dataset.xlsx"),sheet_name = SHEET_NAME)
+#pd.read_excel(os.path.join(DATASET_DIR,'Dataset.xlsx'), sheet_name=SHEET_NAME)
+
 
 # dataframe contendo todos os jobs
 jobs_df = raw_df[['lot', 'operation', 'machine', 'proc-time']]
